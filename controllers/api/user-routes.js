@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
             console.log(err);
-            res.status(500);
+            res.status(500).json(err);
         });
 });
 
@@ -32,7 +32,8 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
-        email: req.body.email
+        email: req.body.email, 
+        password: req.body.password
     })
         .then(dbUserData => {
             res.json(dbUserData);
