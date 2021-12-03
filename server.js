@@ -1,4 +1,5 @@
 const routes = require('./controllers');
+const helpers = require('./utils/helpers');
 const path = require('path');
 
 const sequelize = require('./config/connection');
@@ -17,7 +18,7 @@ const sess = {
     })
 };
 
-const hbs = exphbs.create();
+const hbs = exphbs.create({ helpers });
 
 const app = express();
 const PORT = 3001;

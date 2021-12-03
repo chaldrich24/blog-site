@@ -86,3 +86,12 @@ footer {
     width: 50%;
     margin: 20px auto;
 }
+
+#logout-btn {
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    font-family: inherit;
+}

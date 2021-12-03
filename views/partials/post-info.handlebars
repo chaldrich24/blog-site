@@ -3,7 +3,7 @@
         <a href="/post/{{id}}">
             <h3 class='post-title'>{{post_title}}</h3>
         </a>
-        <h4>by {{user.username}} on {{createdAt}}</h4>
+        <h4>by {{user.username}} on {{format_date createdAt}}</h4>
     </div>
     <p>{{post_contents}}</p>
 </div>
