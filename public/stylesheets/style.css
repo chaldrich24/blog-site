@@ -85,7 +85,7 @@ footer {
     font-weight: bold;
 }
 
-#add-comment-form {
+#add-comment-form, #add-post-form {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -94,10 +94,22 @@ footer {
     margin-top: 20px;
 }
 
-#add-comment-form textarea {
+#add-comment-form textarea, #add-post-form textarea {
     width: 75%;
     margin: 10px 0;
     height: 80px;
+}
+
+#add-post-form {
+    display: none;
+}
+
+#add-post-form textarea {
+    margin-top: 0;
+}
+
+#add-post-form > * {
+    margin-bottom: 10px;
 }
 
 #login-container {
