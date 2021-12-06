@@ -1,0 +1,8 @@
+<h3>
+    Comments
+</h3>
+{{#each this}}
+<div>
+    <p><span class='comment-user'>by {{user.username}} at {{format_date createdAt}}: </span>{{comment_text}}</p>
+</div>
+{{/each}}

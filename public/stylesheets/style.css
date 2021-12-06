@@ -81,6 +81,25 @@ footer {
     margin-bottom: 10px;
 }
 
+.comment-user {
+    font-weight: bold;
+}
+
+#add-comment-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+#add-comment-form textarea {
+    width: 75%;
+    margin: 10px 0;
+    height: 80px;
+}
+
 #login-container {
     display: flex;
     justify-content: space-between;

@@ -1,3 +1,17 @@
-<div class='post-container'> 
+<div class='post-container'>
     {{>post-info post}}
+    {{#if loggedIn}}
+    <form id='add-comment-form'>
+        <label for='new-comment'>Add Comment:</label>
+        <textarea id='new-comment'></textarea>
+        <button id='add-comment-btn' type='submit'>Add</button>
+    </form>
+    {{/if}}
 </div>
+
+<div class='post-container'>
+    {{>comment-info post.comments}}
+</div>
+{{#if loggedIn}}
+<script src='/javascript/comment.js'></script>
+{{/if}}
