@@ -57,6 +57,12 @@ footer {
     padding: 0 10px;
 }
 
+.post textarea {
+    width: 90%;
+    height: 50px;
+    margin: 5px;
+}
+
 .post-title-info {
     display: flex;
     justify-content: space-between;
@@ -83,6 +89,10 @@ footer {
 
 .comment-user {
     font-weight: bold;
+}
+
+.edit-buttons {
+    margin-top: 20px;
 }
 
 #add-comment-form, #add-post-form {
@@ -127,4 +137,8 @@ footer {
     border: none;
     font-size: 20px;
     font-family: inherit;
+}
+#confirm-edit-btn {
+    width: 25%;
+    margin: 0 10px 10px 10px;
 }
