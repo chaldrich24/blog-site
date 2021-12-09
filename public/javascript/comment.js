@@ -1,5 +1,9 @@
 const addCommentForm = document.querySelector('#add-comment-form');
-const post_id = window.location.href.split('/')[4];
+let post_id = window.location.href.split('/')[4];
+
+if (post_id === 'edit') {
+    post_id = window.location.href.split('/')[5];
+}
 
 async function addComment(event) {
     event.preventDefault();

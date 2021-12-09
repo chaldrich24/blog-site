@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bobbins Blog</title>
+    <title>Realest Blog</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-    <div>
+    <div class='main-div'>
         <header>
             <a href='/'>
                 <h1>
-                    Bobbins Blog
+                    The Realest Blog Ever
                 </h1>
             </a>
             <nav>
@@ -29,10 +29,11 @@
         <main>
             {{{ body }}}
         </main>
-        <footer>
-            Thanks for visiting!
-        </footer>
+
     </div>
+    <footer>
+        Thanks for visiting!
+    </footer>
     {{#if loggedIn}}
     <script src='/javascript/logout.js'></script>
     {{/if}}

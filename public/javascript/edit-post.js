@@ -1,5 +1,7 @@
 const editBtn = document.querySelector('#edit-post-btn');
 const deleteBtn = document.querySelector('#delete-post-btn');
+const id = document.location.href.split('/')[5];
+console.log(id);
 
 function editPost() {
     const post_title = document.querySelector('.post-title-info a h3').innerHTML.trim();
@@ -30,12 +32,34 @@ function editPost() {
         const post_contents = postContentsInput.value.trim();
         console.log(post_title, post_contents)
 
-        const
+        submitEditPost(post_title, post_contents);
     })
 }
 
-function deletePost() {
+async function submitEditPost(post_title, post_contents) {
+    console.log(post_title, post_contents)
+    const response = await fetch(`/api/posts/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify({
+            post_title,
+            post_contents
+        }),
+        headers: {'Content-Type': 'application/json'}
+    });
 
+    if (response.ok) {
+        location.reload();
+    }
+}
+
+async function deletePost() {
+    const response = await fetch(`/api/posts/${id}`, {
+        method: 'DELETE'
+    });
+
+    if (response.ok) {
+        document.location.replace('/dashboard');
+    }
 }
 
 editBtn.addEventListener('click', editPost);
